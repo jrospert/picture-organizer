@@ -113,7 +113,7 @@ class rename_file:
     def renameFiles(self, dir):
         
         # Change to directory
-        #os.chdir(dir)
+        os.chdir(dir)
         #print(f'dir is: {dir}')
 
         
@@ -135,7 +135,7 @@ class rename_file:
                 continue
 
             fileType = os.path.splitext(file)[1]
-            if fileType == '.MP4' or fileType == '.MOV':
+            if fileType == '.MP4' or fileType == '.mp4' or fileType == '.MOV' or fileType == '.mov':
                 #print(f'This is a {fileType} file')
                 dateTime = self.getVideoDateTime(file)      
             else:
